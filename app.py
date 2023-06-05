@@ -1,5 +1,6 @@
 # Recherche LLM dans un fichier data.txt
 
+import os
 from dotenv import load_dotenv
 import streamlit as st
 from urllib.parse import urlparse, parse_qs
@@ -20,6 +21,7 @@ def lire_fichier_data():
 
 def main():
     load_dotenv()
+    password=os.getenv('PASSWORD')
     
     st.set_page_config(page_title="Assistant de l'Hôtel de la Sûre")
     
@@ -35,7 +37,7 @@ def main():
     
     # Ask for usage code
     usage_code = st.text_input("Entrez votre code d'utilisation:")
-    if usage_code == 'Koekelberg1081':
+    if usage_code == password:
         
         
         # chargement data
