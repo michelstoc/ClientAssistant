@@ -1,0 +1,10 @@
+swig
+faiss-cpu
+langchain
+PyPDF2
+python-dotenv
+streamlit
+streamlit-ace
+tiktoken
+openai
+beautifulsoup4
